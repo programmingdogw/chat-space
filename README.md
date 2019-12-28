@@ -12,7 +12,7 @@ add_index :users, :id
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique:true|
+|group_name|string|null: false, unique:true, add_index|
 
 
 ### Association
@@ -36,10 +36,10 @@ add_index :users, :id
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |images|string||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, t.references :user, index: true, foreign: true|
+|group_id|integer|null: false, t.references :group, index: true, foreign: true|
 
 ### Association
 - belongs_to :user
