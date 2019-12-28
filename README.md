@@ -1,11 +1,7 @@
 #DB設計
 
 ## usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_name|string|null: false, unique:true, add_index:true|
-|mail_address|string|null: false, unique:true,|
+add_index :users, :id
 
 ### Association
 - has_many: messages
@@ -28,8 +24,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, t.references :user, index: true, foreign: true|
+|group_id|integer|null: false, t.references :group, index: true,foreign_key:true|
+
 
 ### Association
 - belongs_to :group
