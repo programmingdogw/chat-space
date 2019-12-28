@@ -16,7 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique:true,|
+|group_name|string|null: false, unique:true|
 
 
 ### Association
