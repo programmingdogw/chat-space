@@ -110,7 +110,6 @@
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
       .messagewrapper{
-        background-color: red;
         padding: 35px 0 0 40px;
         .message{
           margin-bottom: 46px;
@@ -141,6 +140,8 @@
     .mainfooter{
       background-color:#d2d2d2;
       height: 90px;
+      width: 100%;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -148,16 +149,15 @@
         position: relative;
         width: 100%;
         .inputtext{
-          width: 550px;
-          height: 50px;
-          margin-left: 50px;
+          width: 100%;
+          height: 100%;
+          padding-left: 10px;
         }        
       }
       .submitbtn{
         width: 180px;
         height: 90px;
         background-color: blue;
-        margin: 20px 40px 20px 15px;
       }
     }
 
