@@ -141,17 +141,23 @@
     .mainfooter{
       background-color:#d2d2d2;
       height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       .inputbox{
-        width: 100%;
         position: relative;
-        .imageicon{
-          position: absolute;
-          right: 10px;
-        }
-      .sbmbtn{
-        margin: auto 40px 15px auto;
-        border: solid;
+        width: 100%;
+        .inputtext{
+          width: 550px;
+          height: 50px;
+          margin-left: 50px;
+        }        
       }
+      .submitbtn{
+        width: 180px;
+        height: 90px;
+        background-color: blue;
+        margin: 20px 40px 20px 15px;
       }
     }
 
