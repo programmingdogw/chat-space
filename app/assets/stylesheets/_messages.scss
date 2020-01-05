@@ -108,7 +108,35 @@
     .mainbody{
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
+      .messagewrapper{
+        background-color: red;
+        padding: 35px 0 0 40px;
+        .message{
+          margin-bottom: 46px;
+          .upperside{
+            display: flex;
+            .username{
+              color: #333333;
+              font-size: 16px;
+              margin-bottom: 12px;
+            }
+            .timestamp{
+              color: #999999;
+              font-size: 12px;
+              margin-left: 5px;
+            }
+          }
+          .lowerside{
+            font-size: 14px;
+            color: #434A54;
+          }
+        }
+      }
     }
+    
+    
+    
+    
     .mainfooter{
       background-color:#d2d2d2;
       height: 90px;
