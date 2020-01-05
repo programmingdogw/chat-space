@@ -5,8 +5,8 @@
 
 .wrapper{
   display: flex;
-
-  // サイド部分
+// サイド部分
+  // サイドヘッダー部分
   .sidebar{
     width: 300px;
     height: 100vh;
@@ -39,7 +39,7 @@
     }
 
 
-
+    // サイドボティー部分
     .sidebody{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
@@ -61,7 +61,7 @@
 
 
 // メイン部分
-
+  // メインヘッダー部分
   .mainbar{
     width: calc(100vw - 300px);
     height: 100vh;
@@ -105,6 +105,7 @@
       }
     }
 
+    // メインボディ部分
     .mainbody{
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
@@ -136,10 +137,22 @@
     
     
     
-    
+    // 投稿フォーム部分
     .mainfooter{
       background-color:#d2d2d2;
       height: 90px;
+      .inputbox{
+        width: 100%;
+        position: relative;
+        .imageicon{
+          position: absolute;
+          right: 10px;
+        }
+      .sbmbtn{
+        margin: auto 40px 15px auto;
+        border: solid;
+      }
+      }
     }
 
   }
