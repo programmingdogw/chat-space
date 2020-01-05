@@ -1,0 +1,112 @@
+
+*{
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+
+  
+  .sidebar{
+    width: 300px;
+    height: 100vh;
+    color: #ffffff;
+    font-weight: bold;
+
+    .sidehead{
+      background-color: #253141;
+      height: 100px;
+      display: flex;
+      align-items: center;
+       .sidebox{
+         width: 260px;
+         height: 20px;    
+         margin: 0 auto;
+         justify-content:space-between;
+         display: flex;
+         .username{
+           line-height: 20px;
+         }
+         .iconlists{
+           width: 60px;
+           display:flex;
+           justify-content: flex-end;
+            .icon1{
+              margin-right: 5px;
+            }
+         }
+       }
+    }
+
+
+
+    .sidebody{
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      .sideblock{
+        height: 91px;
+        width: 300px;
+        .groupname{
+          font-size: 15px;
+          padding: 20px 20px 5px;
+        }
+        .lastmessage{
+          font-size: 11px;
+          padding:0 20px 0;
+        }
+      }
+    }
+
+  }
+
+
+// メイン部分
+
+  .mainbar{
+    background-color: pink;
+    width: calc(100vw - 300px);
+    height: 100vh;
+    .mainhead{
+      height: 100px;
+      width: calc(100vw - 300px);
+      display: flex;
+      justify-content: space-between;
+      background-color: green;
+      padding: 0 40px;
+      .lefthead{
+        background-color: blue;
+        .groupname{
+          font-size: 20px;
+          color: #333333;
+          margin: 35px 0 15px 0;
+          background-color: brown;
+        }
+        .memberlist{
+          display: flex;
+          color: #999999;
+          font-size: 12px;
+          li{
+            margin-right: 5px;
+          }
+        }
+      }
+      
+      .righthead{
+        width: 72px;
+        height: 40px;
+        margin: 28px 20px 32px 20px;
+        background-color: red;
+        color:#38aef0;
+        font-size: 16px;
+        line-height: 40px;
+        text-align:center;
+        border: 2px solid;
+        .editbtn{
+          color:#38aef0;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+}
