@@ -6,7 +6,7 @@
 .wrapper{
   display: flex;
 
-  
+  // サイド部分
   .sidebar{
     width: 300px;
     height: 100vh;
@@ -63,7 +63,6 @@
 // メイン部分
 
   .mainbar{
-    background-color: pink;
     width: calc(100vw - 300px);
     height: 100vh;
     .mainhead{
@@ -71,15 +70,14 @@
       width: calc(100vw - 300px);
       display: flex;
       justify-content: space-between;
-      background-color: green;
+      background-color: #ffffff;
       padding: 0 40px;
+      border-bottom: solid 1px #eeeeee ;
       .lefthead{
-        background-color: blue;
         .groupname{
           font-size: 20px;
           color: #333333;
           margin: 35px 0 15px 0;
-          background-color: brown;
         }
         .memberlist{
           display: flex;
@@ -95,7 +93,6 @@
         width: 72px;
         height: 40px;
         margin: 28px 20px 32px 20px;
-        background-color: red;
         color:#38aef0;
         font-size: 16px;
         line-height: 40px;
@@ -107,6 +104,16 @@
         }
       }
     }
+
+    .mainbody{
+      background-color: #fafafa;
+      height: calc(100vh - 100px - 90px);
+    }
+    .mainfooter{
+      background-color:#d2d2d2;
+      height: 90px;
+    }
+
   }
 
 }
