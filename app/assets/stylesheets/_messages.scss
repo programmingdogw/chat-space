@@ -110,11 +110,10 @@
     }
 
     // メインボディ部分
-    .mainbody{
+    &__body{
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
-      .messagewrapper{
-        padding: 35px 0 0 40px;
+      padding: 35px 40px 35px 40px;
         .message{
           margin-bottom: 46px;
           .upperside{
@@ -136,7 +135,6 @@
           }
         }
       }
-    }
     
     
     
