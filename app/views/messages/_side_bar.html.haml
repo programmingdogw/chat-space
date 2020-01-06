@@ -1,14 +1,14 @@
-.sidebar 
+.side
   -# サイドヘッダー内
-  .sidehead
-    .sidebox 
-      %p.username 正雄
-      %ul.iconlists
-        %li.icon1 
-        = link_to "#", class: "icon1" do
+  .side__header
+    .side__header__box
+      %p.side__header__box__username 正雄
+      %ul.side__header__box__iconlists
+        %li 
+        = link_to "#", class: "side__header__box__iconlists--icon1" do
           = icon('fas', 'edit')
-        %li.icon2 
-        = link_to "#", class: "icon2" do
+        %li
+        = link_to "#", class: "side__header__box__iconlists--icon2" do
           = icon('fas', 'cog')
 
   -# サイドボディー内

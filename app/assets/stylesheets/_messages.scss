@@ -7,35 +7,35 @@
   display: flex;
 // サイド部分
   // サイドヘッダー部分
-  .sidebar{
+  .side{
     width: 300px;
     height: 100vh;
     color: #ffffff;
     font-weight: bold;
 
-    .sidehead{
+    &__header{
       background-color: #253141;
       height: 100px;
       display: flex;
       align-items: center;
-       .sidebox{
+       &__box{
          width: 260px;
          height: 20px;    
          margin: 0 auto;
          justify-content:space-between;
          display: flex;
-         .username{
+         &__username{
            line-height: 20px;
          }
-         .iconlists{
+         &__iconlists{
            width: 60px;
            display:flex;
            justify-content: flex-end;
-            .icon1{
+            &--icon1{
               margin-right: 5px;
               color: white;
             }
-            .icon2{
+            &--icon2{
               color: white;
             }
          }
