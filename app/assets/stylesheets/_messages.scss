@@ -116,7 +116,7 @@
       padding: 35px 40px 35px 40px;
         .message{
           margin-bottom: 46px;
-          .upperside{
+          &__upperside{
             display: flex;
             .username{
               color: #333333;
@@ -129,7 +129,7 @@
               margin-left: 5px;
             }
           }
-          .lowerside{
+          &__lowerside{
             font-size: 14px;
             color: #434A54;
           }
