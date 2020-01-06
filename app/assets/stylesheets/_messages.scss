@@ -66,10 +66,10 @@
 
 // メイン部分
   // メインヘッダー部分
-  .mainbar{
+  .main{
     width: calc(100vw - 300px);
     height: 100vh;
-    .mainhead{
+    &__headr{
       height: 100px;
       width: calc(100vw - 300px);
       display: flex;
@@ -77,23 +77,23 @@
       background-color: #ffffff;
       padding: 0 40px;
       border-bottom: solid 1px #eeeeee ;
-      .lefthead{
-        .groupname{
+      .leftheader{
+        &__groupname{
           font-size: 20px;
           color: #333333;
           margin: 35px 0 15px 0;
         }
-        .memberlist{
+        &__memberlist{
           display: flex;
           color: #999999;
           font-size: 12px;
           li{
-            margin-right: 5px;
+            margin-left: 5px;
           }
         }
       }
       
-      .righthead{
+      .rightheadr{
         width: 72px;
         height: 40px;
         margin: 28px 20px 32px 20px;
@@ -102,7 +102,7 @@
         line-height: 40px;
         text-align:center;
         border: 2px solid;
-        .editbtn{
+        &__editbtn{
           color:#38aef0;
           text-decoration: none;
         }
