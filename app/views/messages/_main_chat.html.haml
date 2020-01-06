@@ -33,5 +33,8 @@
     .inputbox
       %form
         %input.inputtext{:type => "text"} 
+          %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
     .submitbtn 
-      %input.sendbtn{:type => "submit"}
+      %input.sendbtn{:type => "submit", :value => "Send"} 

@@ -143,21 +143,34 @@
       width: 100%;
       padding: 20px 40px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       .inputbox{
         position: relative;
         width: 100%;
         .inputtext{
           width: 100%;
-          height: 100%;
+          height: 50px;
           padding-left: 10px;
+          position: relative;
+            .input-box__image{
+              position: absolute;
+              right:10px;
+            }          
         }        
       }
       .submitbtn{
-        width: 180px;
+        width: 150px;
         height: 90px;
-        background-color: blue;
+        position: relative;
+        .sendbtn{
+          color:  white;
+          background-color:  #38aef0;
+          width: 100px;
+          height: 50px;
+          position: absolute;
+          left:40px;
+          top: 20px;
+        }
       }
     }
 
