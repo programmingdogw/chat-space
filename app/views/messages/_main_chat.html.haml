@@ -29,11 +29,10 @@
       .message__lowerside メッセージが入る
 
   .main__form
-    .inputbox
-      %form
-        %input.inputtext{:type => "text"} 
-          %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-    .submitbtn 
-      %input.sendbtn{:type => "submit", :value => "Send"} 
+    %form.new-message
+      .inputbox
+        %input.input-text{:placeholder => "type a message", :type => "text"}/ 
+        %label{class: "input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file"}
+      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
