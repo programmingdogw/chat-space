@@ -148,6 +148,7 @@
         display: flex;
         &__inputbox{
           width: 100%;
+          position: relative;
           .inputtext{
             font-size: 16px;
             height: 50px;
@@ -156,6 +157,16 @@
             color: #434a54;
             border-style: none;
           }
+          .inputimage{
+            position: absolute;
+            font-size: 25px;
+            right: 10px;
+            top: 10px;
+            &__filebtn{
+              display: none;
+            }
+          }
+
         }
         &__submitbtn{
           color: white;

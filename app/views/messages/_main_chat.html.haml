@@ -32,7 +32,7 @@
     %form.newmessage
       .newmessage__inputbox
         %input.inputtext{:placeholder => "type a message", :type => "text"}
-        -# %label.inputimage
-        -# = icon('fas', 'image')
-        -# %input{type: "file"}
+        %label.inputimage
+          = icon('fas', 'image')
+          %input.inputimage__filebtn{type: "file"}
       %input.newmessage__submitbtn{:name => "commit", :type => "submit", :value => "Send"}
