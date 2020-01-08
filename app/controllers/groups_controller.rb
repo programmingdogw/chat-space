@@ -24,6 +24,7 @@ class GroupsController < ApplicationController
       redirect_to root_path, notice: 'グループを更新しました'
     else
       render :edit
+    end
   end
 
   private
