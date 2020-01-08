@@ -2,13 +2,14 @@
   -# サイドヘッダー内
   .side__header
     .userbox
-      %p.userbox__username 正雄
+      %p.userbox__username 
+        = current_user.name
       %ul.userbox__iconlists
         %li 
         = link_to "#", class: "userbox__iconlists--icon1" do
           = icon('fas', 'edit')
         %li
-        = link_to "#", class: "userbox__iconlists--icon2" do
+        = link_to edit_user_path(current_user), class: "userbox__iconlists--icon2" do
           = icon('fas', 'cog')
 
   -# サイドボディー内
