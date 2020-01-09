@@ -14,15 +14,11 @@
 
   -# サイドボディー内
   .side__body
-    .group
-      .group__name KKK
-      .group__message 白頭巾ちゃん
-    .group
-      .group__name 創価学会
-      .group__message 南無妙法蓮華経
-    .group
-      .group__name イルミナティ
-      .group__message カードの予言通り
-    .group
-      .group__name キリン
-      .group__message キリンですうううう
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name 
+            =group.name
+          .group__message 
+            メッセージはまだありません
+      
