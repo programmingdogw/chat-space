@@ -1,0 +1,24 @@
+.side
+  -# サイドヘッダー内
+  .side__header
+    .userbox
+      %p.userbox__username 
+        = current_user.name
+      %ul.userbox__iconlists
+        %li 
+        = link_to new_group_path(current_user), class: "userbox__iconlists--icon1" do
+          = icon('fas', 'edit')
+        %li
+        = link_to edit_user_path(current_user), class: "userbox__iconlists--icon2" do
+          = icon('fas', 'cog')
+
+  -# サイドボディー内
+  .side__body
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name 
+            =group.name
+          .group__message 
+            メッセージはまだありません
+      
