@@ -13,8 +13,7 @@
       %div= link_to "Edit", edit_group_path(@group), class: "rightheadr__editbtn" 
 
   .main__body 
-    .message
-      = render @messages
+    = render @messages
   
   .main__form
     = form_for [@group, @message], :html =>{:class => "newmessage"}  do |f|
