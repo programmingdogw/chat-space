@@ -16,7 +16,7 @@
   .side__body
     - current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group.id) do
+        = link_to group_messages_path(group) do
           .group__name 
             =group.name
           .group__message 
