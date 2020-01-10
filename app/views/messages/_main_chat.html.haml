@@ -2,37 +2,24 @@
 .main
   .main__headr
     .leftheader
-      .leftheader__groupname イルミナティ
+      .leftheader__groupname 
+        =@group.name
       %ul.leftheader__memberlist 
         Member:
-        %li masao
-        %li kirin
-        %li sonshi
+        -@membernames.each do |member|
+          %li 
+            =member.name
     .rightheadr
-      %div= link_to "Edit", "#", class: "rightheadr__editbtn" 
+      %div= link_to "Edit", edit_group_path(@group), class: "rightheadr__editbtn" 
 
   .main__body 
-    .message
-      .message__upperside
-        .username ユーザー名
-        .timestamp 2019/11/20(Wed) 17:43:01
-      .message__lowerside メッセージが入る
-    .message
-      .message__upperside
-        .username ユーザー名
-        .timestamp 2019/11/20(Wed) 17:43:01
-      .message__lowerside メッセージが入る
-    .message
-      .message__upperside
-        .username ユーザー名
-        .timestamp 2019/11/20(Wed) 17:43:01
-      .message__lowerside メッセージが入る
-
+    = render @messages
+  
   .main__form
-    %form.newmessage
+    = form_for [@group, @message], :html =>{:class => "newmessage"}  do |f|
       .newmessage__inputbox
-        %input.inputtext{:placeholder => "type a message", :type => "text"}
-        %label.inputimage
+        = f.text_field :content, class: 'inputtext', placeholder: 'type a message'
+        = f.label :image, class: 'inputimage' do
           = icon('fas', 'image')
-          %input.inputimage__filebtn{type: "file"}
-      %input.newmessage__submitbtn{:name => "commit", :type => "submit", :value => "Send"}
+          = f.file_field :image, class: 'inputimage__filebtn'
+      = f.submit 'Send', class: 'newmessage__submitbtn'
