@@ -6,9 +6,9 @@
         =@group.name
       %ul.leftheader__memberlist 
         Member:
-        %li masao
-        %li kirin
-        %li sonshi
+        -@membernames.each do |member|
+          %li 
+            =member.name
     .rightheadr
       %div= link_to "Edit", edit_group_path(@group), class: "rightheadr__editbtn" 
 
