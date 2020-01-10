@@ -15,11 +15,12 @@
   .main__body 
     .message
       = render @messages
+  
   .main__form
-    %form.newmessage
+    = form_for [@group, @message], :html =>{:class => "newmessage"}  do |f|
       .newmessage__inputbox
-        %input.inputtext{:placeholder => "type a message", :type => "text"}
-        %label.inputimage
+        = f.text_field :content, class: 'inputtext', placeholder: 'type a message'
+        = f.label :image, class: 'inputimage' do
           = icon('fas', 'image')
-          %input.inputimage__filebtn{type: "file"}
-      %input.newmessage__submitbtn{:name => "commit", :type => "submit", :value => "Send"}
+          = f.file_field :image, class: 'inputimage__filebtn'
+      = f.submit 'Send', class: 'newmessage__submitbtn'
