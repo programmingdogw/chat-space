@@ -1,19 +1,41 @@
 $(function(){
-  function buildHTML(comment){
-    var html = `
-    
-    `
-// 上のテンプレートリテラル部分に必要なHTML組み立てて置いて、後で、データ受け取ったdoneでまた組み立てて
-// appendして、テキストの部分からにして、ボタン押せるようにして返す
-// のかと思ったが、模範解答はappendしてないな、積み重なってうまくいくのか？？
-// まぁそこは後で作るのかもしれんが、後はフォームからdataで受け取ったデータをメッセージ部分にレンダリングすればいいはず
-// メインの部分とサイドの部分両方のデータが変わるかはよくわからんが、とにかくレンダリングできるようにならないと
-// 解答は恐らくメインボディのメッセージ部分しかレンダリングしてないと思う
-// まぁ続き読んでから実装した方が良さそうだ
+  function buildHTML(message){
+    if ( message.image ) {
+      var html =
+      `<div class="message" data-message-id=${message.id}>
+        <div class="message__upperside">
+          <div class="username">
+            ${message.user_name}
+          </div>
+          <div class="timestamp">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="message__lowerside">
+            ${message.content}
+        </div>
+        <img src=${message.image} >
+       </div>`
+      return html;
+    } else {
+      var html =
+      `<div class="message" data-message-id=${message.id}>
+        <div class="message__upperside">
+          <div class="username">
+            ${message.user_name}
+          </div>
+          <div class="timestamp">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="message__lowerside">
+            ${message.content}
+        </div>`
+        return html;
+    };
+  };
 
-    return html;
-  }
-  $('#new_message').on('submit', function(e){
+  $('.newmessage').on('submit', function(e){
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action');
@@ -27,9 +49,9 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data); 
-      $('.comments').append(html);
-      $('.textbox').val('');
-      $('.form__submit').prop('disabled', false);
+      $('.main__body').append(html);      
+      $('.inputtext').val("");
+      $('.newmessage').prop('disabled', false);
     })
     .fail(function(){
       alert('error');
