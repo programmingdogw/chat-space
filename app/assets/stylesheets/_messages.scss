@@ -50,6 +50,10 @@
       .group{
         height: 91px;
         width: 300px;
+        a{
+          text-decoration:none;
+          color:white;
+        }
         &__name{
           font-size: 15px;
           padding: 20px 20px 5px;
