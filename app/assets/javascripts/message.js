@@ -50,7 +50,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data); 
       $('.main__body').append(html);      
-      $('.inputtext').val("");
+      $('.inputtext').reset();
       $('.newmessage').prop('disabled', false);
     })
     .fail(function(){
