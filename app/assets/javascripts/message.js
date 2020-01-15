@@ -49,12 +49,13 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data); 
-      $('.main__body').append(html);      
+      $('.main__body').append(html); 
+      $('.main__body').animate({ scrollTop: $('.main__body')[0].scrollHeight});     
       $('.newmessage')[0].reset();
       $('.newmessage__submitbtn').prop('disabled', false);
     })
     .fail(function(){
-      alert('error');
+      alert('メッセージ送信に失敗しました');
     })
   });
 });
