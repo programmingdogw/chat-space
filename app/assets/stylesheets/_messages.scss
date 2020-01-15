@@ -47,9 +47,14 @@
     &__body{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
+      overflow:auto;
       .group{
         height: 91px;
         width: 300px;
+        a{
+          text-decoration:none;
+          color:white;
+        }
         &__name{
           font-size: 15px;
           padding: 20px 20px 5px;
@@ -114,6 +119,7 @@
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
       padding: 35px 40px 35px 40px;
+      overflow:auto;
         .message{
           margin-bottom: 46px;
           &__upperside{
