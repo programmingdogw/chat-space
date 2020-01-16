@@ -35,6 +35,31 @@ $(function(){
     };
   };
 
+  var reloadMessages = function(){
+    last_message_id = $('.message:last').data("message-id");
+    $.ajax({ 
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',  
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        var insertHTML = ''; 
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.main__body').append(insertHTML);
+        $('.main__body').animate({ scrollTop: $('.main__body')[0].scrollHeight});
+        $("newmessage")[0].reset();
+        $(".newmessage__submitbtn").prop("disabled", false);
+      }
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
+
   $('.newmessage').on('submit', function(e){
     e.preventDefault()
     var formData = new FormData(this);
@@ -58,4 +83,7 @@ $(function(){
       alert('メッセージ送信に失敗しました');
     })
   });
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
